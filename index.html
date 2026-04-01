@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Glow Up — Deja la Procrastinación Para Siempre</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --rose: #f5c2cb;
@@ -48,9 +48,14 @@
   }
 
   /* ── TYPOGRAPHY ── */
-  h1, h2, h3 { font-family: 'Cormorant Garamond', serif; }
+  h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-variant-numeric: lining-nums; }
 
-  h1 { font-size: clamp(2.8rem, 6vw, 5.5rem); font-weight: 300; line-height: 1.1; letter-spacing: -0.02em; }
+  .valor,
+  .valor * {
+    font-variant-numeric: lining-nums !important;
+  }
+
+  h1 { font-size: clamp(2.2rem, 4.5vw, 4rem); font-weight: 300; line-height: 1.1; letter-spacing: -0.02em; }
   h2 { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 300; line-height: 1.2; }
   h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); font-weight: 400; }
 
@@ -134,7 +139,7 @@
   .hero-badge span { width: 6px; height: 6px; background: var(--mauve); border-radius: 50%; display: inline-block; }
 
   .hero h1 { color: var(--navy); margin-bottom: 1.5rem; }
-  .hero h1 em { font-style: italic; color: var(--mauve); }
+  .hero    em { font-style: italic; color: var(--mauve); }
   .hero p { font-size: 1.15rem; margin-bottom: 2.5rem; max-width: 480px; }
 
   .hero-cta-group { display: flex; flex-direction: column; gap: 1rem; align-items: flex-start; }
@@ -187,17 +192,14 @@
   .book-card:hover { transform: rotate(0deg) scale(1.02); }
 
   .book-cover {
-    width: 120px; height: 160px;
-    background: var(--gradient-dark);
+    width: 150px; height: 200px;
+    background: transparent;
     border-radius: 12px;
-    margin: 0 auto 1.5rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(26,20,51,0.3);
+    box-shadow: none;
+    margin: 0 auto;
   }
 
   .book-stars {
@@ -393,9 +395,9 @@
   .modulo-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(90,78,114,0.13); }
 
   .modulo-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3.5rem;
-    font-weight: 300;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 400;
     color: rgba(201,184,232,0.35);
     line-height: 1;
     margin-bottom: 0.5rem;
@@ -522,9 +524,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem;
-    font-weight: 300;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
     margin-bottom: 1.5rem;
     position: relative;
     z-index: 1;
@@ -662,9 +664,9 @@
   .semana-item:last-child { border-bottom: none; }
 
   .s-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem;
-    font-weight: 300;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
     color: var(--lavender);
     line-height: 1;
     min-width: 28px;
@@ -739,9 +741,9 @@
 
   .resultado-week {
     display: inline-block;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3.5rem;
-    font-weight: 300;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
     color: var(--mauve);
     line-height: 1;
     margin-bottom: 0.25rem;
@@ -886,13 +888,14 @@
     border: 1px solid rgba(255,255,255,0.15);
     border-radius: 8px;
     padding: 0.3rem 0.65rem;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.3rem;
     font-weight: 600;
     color: white;
     min-width: 42px;
     text-align: center;
     line-height: 1;
+    letter-spacing: 0.02em;
   }
 
   .cd-sep { color: rgba(255,255,255,0.4); font-size: 1.2rem; font-weight: 300; }
@@ -948,10 +951,10 @@
   .valor-row-label span { font-size: 0.78rem; color: var(--light-text); display: block; }
 
   .valor-price {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
     color: var(--mid);
-    font-weight: 400;
+    font-weight: 500;
     white-space: nowrap;
   }
 
@@ -971,7 +974,8 @@
   }
 
   .valor-total-row .valor-price {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    font-family: 'Playfair Display', serif;
     color: var(--mid);
     text-decoration: line-through;
     opacity: 0.6;
@@ -999,29 +1003,64 @@
 
   .precio-launch {
     display: flex;
-    align-items: baseline;
-    justify-content: center;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
     margin-bottom: 0.5rem;
   }
 
+  .precio-antes {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .precio-antes-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
   .precio-tachado {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
-    color: rgba(255,255,255,0.3);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.35);
     text-decoration: line-through;
-    font-weight: 300;
+    font-weight: 400;
+  }
+
+  .precio-hoy-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .precio-hoy-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--rose);
   }
 
   .precio-real {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3.5rem;
-    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 700;
     color: white;
     line-height: 1;
+    letter-spacing: -0.01em;
   }
 
-  .precio-real sup { font-size: 1.8rem; vertical-align: super; }
+  .precio-real sup {
+    font-size: 1.8rem;
+    vertical-align: super;
+    font-weight: 400;
+  }
 
   .precio-label {
     font-size: 0.8rem;
@@ -1078,7 +1117,20 @@
     .precio-real { font-size: 2.8rem; }
   }
 
+  .book-img {
+  width: 160%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  }
 
+  body {
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum" 1;
+  
+
+</style>
 </head>
 <body>
 
@@ -1120,10 +1172,9 @@
       <div class="book-card">
         <div class="floating-pill pill-1">✨ 9 Módulos</div>
         <div class="floating-pill pill-2">🎁 2 Bonos gratis</div>
-        <div class="book-cover">
-          <div class="book-stars"></div>
-          <div class="book-title-visual">My<br>Glow<br>Up</div>
-        </div>
+        <div class="book-cover">   
+          <img src="PortadaPagina.png" alt="My Glow Up" class="book-img">
+        </div><br>
         <h3>My Glow Up</h3>
         <p>Tu guía completa para dejar la procrastinación</p>
       </div>
@@ -1517,8 +1568,14 @@
       <div class="valor-cta-box-inner">
         <div class="ahorro-badge">🎉 Precio especial de lanzamiento — ahorras $32</div>
         <div class="precio-launch">
-          <span class="precio-tachado">$46</span>
-          <span class="precio-real"><sup>$</sup>13.99</span>
+          <div class="precio-antes">
+            <span class="precio-antes-label">Antes</span>
+            <span class="precio-tachado">$46</span>
+          </div>
+          <div class="precio-hoy-row">
+            <span class="precio-hoy-label">Hoy</span>
+            <span class="precio-real"><sup>$</sup>13.99</span>
+          </div>
         </div>
         <p class="precio-label">Pago único · Acceso de por vida · Descarga inmediata</p>
         <a href="https://pay.hotmart.com/P105171151T" target="_blank" class="btn-primary" style="font-size:1.05rem; padding:1rem 2.5rem;">
@@ -1552,17 +1609,17 @@
     </div>
     <div class="resultados-grid fade-up">
       <div class="resultado-card">
-        <div class="resultado-week">S1–S2</div>
+        <div class="resultado-week">Semanas 1 y 2</div><br><br>
         <h3>Claridad total</h3>
         <p>Entiendes tu ciclo de abandono, tienes tu identidad definida y tu primer hábito funcionando con una señal clara.</p>
       </div>
       <div class="resultado-card">
-        <div class="resultado-week">S3–S4</div>
+        <div class="resultado-week">Semanas 3 y 4</div><br><br>
         <h3>Sistema activo</h3>
         <p>Tienes una rutina básica, un plan para días difíciles y estás registrando tu consistencia semana a semana.</p>
       </div>
       <div class="resultado-card">
-        <div class="resultado-week">S5–S6</div>
+        <div class="resultado-week">Semanas 5 y 6</div><br><br>
         <h3>Hábitos automáticos</h3>
         <p>Tus hábitos se ejecutan sin depender de la motivación. Tu entorno te ayuda. Tienes tu plan para los próximos 90 días.</p>
       </div>
